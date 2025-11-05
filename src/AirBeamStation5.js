@@ -44,17 +44,17 @@ function AirBeamStation5({ onBack, onSelectStation }) {
       const previous = data[1];
       
       const formatted = {
-        temperature: latest.pm1 || 0,        // PM1 se muestra como Temperatura
-        humidity: latest.temperature || 0,   // Temperatura se muestra como Humedad
-        pm1: latest.humidity || 0,           // Humedad se muestra como PM1
+        temperature: latest.pm25 || 0,       // PM2.5 se muestra como Temperatura
+        humidity: latest.pm10 || 0,          // PM10 se muestra como Humedad
+        pm1: latest.pm1 || 0,
         pm25: latest.pm25 || 0,
         pm10: latest.pm10 || 0,
         timestamp: latest.timestamp
       };
       const prevFormatted = previous ? {
-        temperature: previous.pm1 || 0,      // PM1 se muestra como Temperatura
-        humidity: previous.temperature || 0, // Temperatura se muestra como Humedad
-        pm1: previous.humidity || 0,         // Humedad se muestra como PM1
+        temperature: previous.pm25 || 0,     // PM2.5 se muestra como Temperatura
+        humidity: previous.pm10 || 0,        // PM10 se muestra como Humedad
+        pm1: previous.pm1 || 0,
         pm25: previous.pm25 || 0,
         pm10: previous.pm10 || 0
       } : null;
@@ -104,9 +104,9 @@ function AirBeamStation5({ onBack, onSelectStation }) {
     if (data && !error && data.length > 0) {
       const formatted = data.reverse().map(d => ({ 
         timestamp: d.timestamp, 
-        temperature: parseFloat(d.pm1) || 0,        // PM1 se muestra como Temperatura
-        humidity: parseFloat(d.temperature) || 0,   // Temperatura se muestra como Humedad
-        pm1: parseFloat(d.humidity) || 0,           // Humedad se muestra como PM1
+        temperature: parseFloat(d.pm25) || 0,       // PM2.5 se muestra como Temperatura
+        humidity: parseFloat(d.pm10) || 0,          // PM10 se muestra como Humedad
+        pm1: parseFloat(d.pm1) || 0,
         pm25: parseFloat(d.pm25) || 0, 
         pm10: parseFloat(d.pm10) || 0 
       }));
