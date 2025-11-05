@@ -1,25 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+// === src/App.jsx - Router Principal ===
+import React, { useState } from "react";
+import Home from "./Home";
+import CalidAirDashboard from "./CalidAirDashboard";
+import AirBeamDashboard from "./AirBeamDashboard";
 
+// === COMPONENTE PRINCIPAL - ROUTER ===
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  const [selectedBrand, setSelectedBrand] = useState(null);
+
+  // Función para manejar selección de marca
+  const handleBrandSelect = (brandId) => {
+    setSelectedBrand(brandId);
+  };
+
+  // Función para volver al inicio o cambiar dashboard
+  const handleBack = (newBrand) => {
+    if (newBrand && newBrand !== selectedBrand) {
+      setSelectedBrand(newBrand);
+    } else {
+      setSelectedBrand(null);
+    }
+  };
+
+  // Renderizar componente según selección
+  if (selectedBrand === 'calidair') {
+    return <CalidAirDashboard onBack={handleBack} />;
+  }
+  
+  if (selectedBrand === 'airbeam') {
+    return <AirBeamDashboard onBack={handleBack} />;
+  }
+
+  // Si no hay selección, mostrar página de inicio
+  return <Home onSelectBrand={handleBrandSelect} />;
 }
 
 export default App;

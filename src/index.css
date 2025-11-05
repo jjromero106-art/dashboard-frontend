@@ -1,13 +1,287 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Force immediate style application */
+#wrap-nav, #wrap-nav ul#menu {
+  opacity: 1 !important;
+  visibility: visible !important;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+#wrap-nav ul#menu {
+  transform: none !important;
+}
+
+/* Navigation Wrapper */
+#wrap-nav {
+  width: 100%;
+  height: 49.31px;
+  background: #F6F8F9;
+  display: flex;
+  justify-content: center;
+}
+
+#wrap-nav {
+  border-bottom: 2px solid #8abf4e;
+}
+
+#wrap-nav ul#menu {
+  width: 1184px;
+  height: 46px;
+  padding: 0px 14px 0px 0px;
+  list-style: none;
+  display: flex;
+  background: #F6F8F9;
+  role: list;
+  justify-content: space-evenly;
+}
+
+#wrap-nav ul#menu li {
+  position: relative;
+  height: 46px;
+  display: flex;
+  align-items: center;
+}
+
+#wrap-nav ul#menu li a {
+  display: inline-block;
+  padding: 0;
+  text-decoration: none;
+  color: #011601;
+  font: 14px "Open Sans", sans-serif;
+  border-bottom: 4px solid transparent;
+  white-space: nowrap;
+  width: auto;
+  min-width: fit-content;
+}
+
+#wrap-nav ul#menu li a span {
+  color: #011601;
+  display: inline-block;
+  padding: 9px 15px;
+  line-height: 28px;
+  white-space: nowrap;
+}
+
+#wrap-nav ul#menu li a:hover {
+  background-color: #f0f0f0;
+}
+
+#wrap-nav ul#menu li.selected a {
+  background-color: #3C672C;
+  color: #FFFFFF;
+  width: auto;
+  min-width: fit-content;
+}
+
+#wrap-nav ul#menu li.selected a span {
+  color: #FFFFFF;
+  white-space: nowrap;
+}
+
+#wrap-nav ul#menu li ul.child-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  border: 1px solid #ccc;
+  min-width: 200px;
+  z-index: 1000;
+}
+
+#wrap-nav ul#menu li:hover ul.child-menu {
+  display: block;
+}
+
+#wrap-nav ul#menu li ul.child-menu li a {
+  padding: 10px;
+  color: black;
+}
+
+#wrap-nav ul#menu li ul.child-menu li a:hover {
+  background-color: #e0e0e0;
+}
+
+@media (max-width: 1600px) {
+  #wrap-nav ul#menu {
+    width: 1183.98px;
+    height: 45.97px;
+  }
+  
+  #wrap-nav ul#menu li a {
+    width: 62.69px;
+    height: 45.97px;
+  }
+}
+
+@media (max-width: 1600px) {
+  #wrap-nav {
+    height: 50px;
+  }
+}
+
+/* Estilos globales */
+body {
+  background-color: #FFFFFF !important;
+  color: #4E4E4E !important;
+}
+
+/* Estilos para el header de la Secretaría de Ambiente */
+.container {
+  width: 1170px;
+  height: 259.31px;
+  margin: 0 auto;
+}
+
+/* Responsive para 90% */
+@media (max-width: 1492px) {
+  .container {
+    height: 259.71px;
+  }
+}
+
+/* Clases dentro del container */
+.logos-header {
+  width: 1170px;
+  height: 106px;
+  position: relative;
+}
+
+.buscador {
+  width: 320px;
+  height: 106px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.container img {
+  width: 585px;
+  height: 121.31px;
+}
+
+.container p {
+  width: 1170px;
+  height: 22px;
+  margin: 0px 0px 10px;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+/* Responsive para 90% - elementos internos */
+@media (max-width: 1492px) {
+  .logos-header {
+    height: 106.39px;
+  }
+  
+  .buscador {
+    height: 106.39px;
+  }
+  
+  .container img {
+    width: 582px;
+    height: 121.32px;
+  }
+}
+
+/* Estilos del buscador Google */
+.buscador p {
+  width: 320px;
+  height: 22px;
+  role: paragraph;
+}
+
+div.gsc-control-cse.gsc-control-cse-es {
+  width: 320px;
+  height: 64px;
+  background: #FFFFFF;
+  padding: 13px;
+}
+
+td.gsc-input {
+  width: 223px;
+  height: 34px;
+  padding: 0px 12px 0px 0px;
+}
+
+div#gsc-iw-id1.gsc-input-box {
+  width: 211px;
+  height: 33px;
+  background: #FFFFFF;
+  text-align: left;
+  border: 2px solid #4A90E2;
+}
+
+td.gsib_b {
+  width: 4px;
+  height: 31px;
+}
+
+td#gs_tti50.gsib_a {
+  width: 205px;
+  height: 31px;
+  padding: 5px 9px 4px;
+}
+
+input#gsc-i-id1.gsc-input {
+  width: 187px;
+  height: 20px;
+  background: #FFFFFF;
+  border: none;
+  outline: none;
+}
+
+button.gsc-search-button.gsc-search-button-v2 {
+  width: 69px;
+  height: 34px;
+  background: #CCCCCC;
+  padding: 6px 27px;
+  border: 2px solid #4A90E2;
+  cursor: pointer;
+}
+
+button.gsc-search-button svg {
+  width: 13px;
+  height: 13px;
+}
+
+/* Responsive 90% - Buscador */
+@media (max-width: 1492px) {
+  div.gsc-control-cse.gsc-control-cse-es {
+    height: 64.39px;
+  }
+  
+  td.gsc-input {
+    width: 222.6px;
+    height: 34.2px;
+  }
+  
+  div#gsc-iw-id1.gsc-input-box {
+    width: 210.62px;
+    height: 33.21px;
+  }
+  
+  td.gsib_b {
+    width: 3.99px;
+    height: 30.99px;
+  }
+  
+  td#gs_tti50.gsib_a {
+    width: 204.39px;
+    height: 30.99px;
+  }
+  
+  input#gsc-i-id1.gsc-input {
+    width: 189.41px;
+  }
+  
+  button.gsc-search-button.gsc-search-button-v2 {
+    width: 69.2px;
+    height: 34.2px;
+  }
+  
+  button.gsc-search-button svg {
+    width: 12.99px;
+    height: 12.99px;
+  }
 }

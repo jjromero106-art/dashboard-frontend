@@ -1,0 +1,124 @@
+/* Footer Styles */
+#wrap-footer {
+  --df-messenger-default-font-family: 'Google Sans', 'Helvetica Neue', sans-serif;
+  --df-messenger-default-font-size: 14px;
+  --df-messenger-default-font-color: #1f1f1f;
+  --df-messenger-default-secondary-font-color: #757575;
+  --df-messenger-default-icon-font-color: #444746;
+  --df-messenger-default-primary-color: #0b57d0;
+  --df-messenger-default-link-font-color: #0b57d0;
+  --df-messenger-default-link-decoration: underline;
+  --df-messenger-default-focus-color: #1e88e5;
+  --df-messenger-default-focus-color-contrast: #fff;
+  --df-messenger-default-border-color: #e0e0e0;
+  --df-messenger-default-border: 1px solid var(--df-messenger-default-border-color);
+  --df-messenger-default-border-radius: 8px;
+  --df-messenger-default-chat-border-radius: 0;
+  --df-messenger-default-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.24);
+  --verde-oscuro: #1c5a1c;
+  --verde-claro: #7fc300;
+  --radio: 24px;
+  --alto-card: 500px;
+  font-size: 14px;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 22px;
+  background: #3c672c;
+  color: #fff;
+  padding-top: 10px;
+  text-align: center;
+  margin-bottom: 2em;
+  padding-bottom: 0.8em;
+  background-size: cover;
+  background-position: 0px 473px;
+}
+
+#footer {
+  font-size: 14px;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 22px;
+  color: #fff;
+  text-align: center;
+  display: block;
+}
+
+.foot.breadcrumb-horizontal {
+  color: #fff;
+  height: 500px;
+  padding: 8px 15px;
+  margin: -200px 0 20px;
+  list-style: none;
+  background-color: #fff;
+  border-radius: 2px;
+  border-color: #e1dfdf;
+  border-width: thin;
+  box-shadow: 0 0 11px 0em #3f414269;
+  text-align: left;
+}
+
+.columns {
+  display: flex;
+  width: 100%;
+}
+
+.column {
+  flex: 1;
+  padding: 20px;
+}
+
+.column h3 {
+  color: #000;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.column h4 {
+  color: #000;
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+#informacion {
+  color: #000;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+#informacion ul {
+  list-style: disc;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+#informacion li {
+  margin-bottom: 5px;
+}
+
+#informacion a {
+  background-color: #8cbe23;
+  color: #141414;
+  padding: 5px 10px;
+  text-decoration: none;
+  margin: 2px;
+  display: inline-block;
+  border-radius: 3px;
+}
+
+#informacion a img {
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+#terminos {
+  margin-top: 20px;
+  color: #000;
+}
+
+#terminos a {
+  color: #000;
+  text-decoration: underline;
+}
+
+.column img {
+  max-width: 100%;
+  height: auto;
+}
